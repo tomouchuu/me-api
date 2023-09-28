@@ -1,15 +1,15 @@
-# Elysia with Bun runtime
+Tomo-Api v5 (me-api)
 
-## Getting Started
-To get started with this template, simply paste this command into your terminal:
-```bash
-bun create elysia ./elysia-example
-```
+An apollo graphql serve backed by bun+elysiajs to power my personal site (& maybe other endevours)
 
-## Development
-To start the development server run:
-```bash
-bun run dev
-```
+Contains:
+- Info about me
+- List of socials
+- Employment history
+- Last github events
+- Songs I last listened to (via. Lastfm)
+- ~~My twitter details~~
+- ~~My last tweets~~
+- ~~Old blogposts~~
 
-Open http://localhost:3000/ with your browser to see the result.
+Benefit of this version is it should be fairly easy to put in your own data by using the `.env.example` and the `src/modules/personal/index.example.ts` to make it your own.
