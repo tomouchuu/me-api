@@ -117,7 +117,10 @@ const app = new Elysia()
       enablePlayground: true,
     })
   )
-  .listen(8080);
+  .listen({
+    hostname: "0.0.0.0",
+    port: process.env.PORT || 8080,
+  });
 
 console.log(
   `🦊 Elysia is running at ${app.server?.hostname}:${app.server?.port}`
