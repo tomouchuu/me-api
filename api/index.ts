@@ -1,9 +1,9 @@
 import { Elysia } from "elysia";
 import { apollo, gql } from "@elysiajs/apollo";
 
-import GithubApi from "../modules/github/index";
-import LastFMApi from "../modules/lastfm/index";
-import personal from "../modules/personal/index";
+import GithubApi from "./modules/github/index.js";
+import LastFMApi from "./modules/lastfm/index.js";
+import personal from "./modules/personal/index.js";
 
 const typeDefs = gql`
   type LastFmMusicInfo {
