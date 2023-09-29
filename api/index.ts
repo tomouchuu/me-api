@@ -1,9 +1,9 @@
-import { Elysia } from 'elysia';
-import { apollo, gql } from '@elysiajs/apollo';
+import { Elysia } from "elysia";
+import { apollo, gql } from "@elysiajs/apollo";
 
-import GithubApi from './modules/github/index';
-import LastFMApi from './modules/lastfm/index';
-import personal from './modules/personal/index';
+import GithubApi from "../modules/github/index";
+import LastFMApi from "../modules/lastfm/index";
+import personal from "../modules/personal/index";
 
 const typeDefs = gql`
   type LastFmMusicInfo {
@@ -89,10 +89,10 @@ const typeDefs = gql`
 
 const resolvers = {
   Query: {
-    github: (_source, {limit}, {dataSources}) => {
+    github: (_source, { limit }, { dataSources }) => {
       return dataSources.githubApi.getEvents(limit);
     },
-    music: (_source, _args, {dataSources}) => {
+    music: (_source, _args, { dataSources }) => {
       return dataSources.lastFmAPI.formatLatestTrack();
     },
     personal: () => personal,
@@ -106,13 +106,15 @@ const app = new Elysia()
       resolvers,
       introspection: true,
       context: async () => {
-        return ({
+        return {
           dataSources: {
             githubApi: new GithubApi(),
             lastFmAPI: new LastFMApi(),
           },
-        });
-      }
+        };
+      },
+      path: "/",
+      enablePlayground: true,
     })
   )
   .listen(8080);

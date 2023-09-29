@@ -1,4 +1,4 @@
-Tomo-Api v5 (me-api)
+# Tomo-Api v5 (me-api)
 
 An apollo graphql serve backed by bun+elysiajs to power my personal site (& maybe other endevours)
 

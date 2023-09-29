@@ -2,8 +2,8 @@
   "name": "me-api",
   "version": "5.0.0",
   "scripts": {
-    "dev": "bun run --watch src/index.ts",
-    "start": "bun run src/index.ts"
+    "dev": "bun run --watch api/index.ts",
+    "start": "bun run api/index.ts"
   },
   "dependencies": {
     "@apollo/datasource-rest": "^6.2.1",
@@ -13,5 +13,5 @@
   "devDependencies": {
     "bun-types": "latest"
   },
-  "module": "src/index.js"
+  "module": "api/index.js"
 }
