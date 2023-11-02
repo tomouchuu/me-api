@@ -1,0 +1,14 @@
+# dependencies
+/node_modules
+
+# misc
+.DS_Store
+
+# debug
+npm-debug.log*
+
+# local env files
+.env.local
+
+# Misc
+**/*.bun
