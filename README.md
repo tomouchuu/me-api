@@ -1,3 +1,6 @@
+# Archived
+API is now used over at https://github.com/tomouchuu/tomouchuu
+
 # Tomo-Api v5 (me-api)
 
 An apollo graphql serve backed by bun+elysiajs to power my personal site (& maybe other endevours)
